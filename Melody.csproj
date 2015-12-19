@@ -55,6 +55,9 @@
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Desktop\music1.jpg" />
+    <EmbeddedResource Include="..\..\Desktop\music2.jpg" />
+    <EmbeddedResource Include="..\..\Desktop\music3.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />

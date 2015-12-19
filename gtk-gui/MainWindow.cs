@@ -9,6 +9,7 @@ public partial class MainWindow
 		// Widget MainWindow
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString ("Угадай мелодию");
+		this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-media-play", global::Gtk.IconSize.Button);
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
