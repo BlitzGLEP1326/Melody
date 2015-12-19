@@ -3,20 +3,68 @@
 
 public partial class MainWindow
 {
+	private global::Gtk.VBox vbox2;
+	
+	private global::Gtk.Button btnGame;
+	
+	private global::Gtk.Button btnParams;
+	
+	private global::Gtk.Button btnExit;
+
 	protected virtual void Build ()
 	{
 		global::Stetic.Gui.Initialize (this);
 		// Widget MainWindow
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString ("Угадай мелодию");
-		this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-media-play", global::Gtk.IconSize.Button);
+		this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-media-play", global::Gtk.IconSize.Menu);
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		// Container child MainWindow.Gtk.Container+ContainerChild
+		this.vbox2 = new global::Gtk.VBox ();
+		this.vbox2.CanDefault = true;
+		this.vbox2.Name = "vbox2";
+		this.vbox2.Spacing = 6;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.btnGame = new global::Gtk.Button ();
+		this.btnGame.CanFocus = true;
+		this.btnGame.Name = "btnGame";
+		this.btnGame.UseUnderline = true;
+		this.btnGame.Label = global::Mono.Unix.Catalog.GetString ("Игра");
+		this.vbox2.Add (this.btnGame);
+		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.btnGame]));
+		w1.Position = 0;
+		w1.Expand = false;
+		w1.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.btnParams = new global::Gtk.Button ();
+		this.btnParams.CanFocus = true;
+		this.btnParams.Name = "btnParams";
+		this.btnParams.UseUnderline = true;
+		this.btnParams.Label = global::Mono.Unix.Catalog.GetString ("Настройки");
+		this.vbox2.Add (this.btnParams);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.btnParams]));
+		w2.Position = 1;
+		w2.Expand = false;
+		w2.Fill = false;
+		// Container child vbox2.Gtk.Box+BoxChild
+		this.btnExit = new global::Gtk.Button ();
+		this.btnExit.CanFocus = true;
+		this.btnExit.Name = "btnExit";
+		this.btnExit.UseUnderline = true;
+		this.btnExit.Label = global::Mono.Unix.Catalog.GetString ("Выход");
+		this.vbox2.Add (this.btnExit);
+		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.btnExit]));
+		w3.Position = 2;
+		w3.Expand = false;
+		w3.Fill = false;
+		this.Add (this.vbox2);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 400;
-		this.DefaultHeight = 300;
+		this.DefaultWidth = 452;
+		this.DefaultHeight = 256;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
+		this.btnExit.Clicked += new global::System.EventHandler (this.ButtonExit_Clicked);
 	}
 }
